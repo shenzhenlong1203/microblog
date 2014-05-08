@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<% include partials/meta %>
+</head>
+<body>
+	<% include partials/header %>
+	
+	<div id="container" class="container">
+		<% include partials/alert %>
+
+		<% if (user) { %>
+		<% include partials/says %>
+		<% } %>
+
+		<% include partials/posts %>
+	</div>
+
+	<% include partials/footer %>	
+</body>
+</html>

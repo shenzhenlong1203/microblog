@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<% include partials/meta %>
+</head>
+<body>
+	<% include partials/header %>
+
+	<div id="container" class="container">
+		<% include partials/alert %>
+
+		<div class="jumbotron">
+			<h1>欢迎来到Microblog</h1>
+			<p>Microblog 是一个基于 Node.js 的微博系统</p>
+			<% if (!user) { %>
+			<p>
+				<a href="/login" class="btn btn-primary btn-large">登录</a>
+				<a href="/reg" class="btn btn-default btn-large">立即注册</a>
+			</p>
+			<% } %>
+		</div>
+
+		<% include partials/posts %>
+	</div>
+
+	<% include partials/footer %>
+</body>
+</html>
